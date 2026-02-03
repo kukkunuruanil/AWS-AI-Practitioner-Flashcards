@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS AI Practitioner Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 AWS AI Practitioner Flashcards</h1>
+            <p class="subtitle">Master AI/ML concepts for the AIF-C01 certification</p>
+        </header>
+
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text">
+                Card <span id="currentCard">1</span> of <span id="totalCards">50</span>
+                <span class="separator">|</span>
+                <span id="categoryName">Core Concepts</span>
+            </p>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <div class="card-content">
+                            <div class="card-number">Card #<span id="cardNumber">1</span></div>
+                            <div class="question" id="question">Loading...</div>
+                            <div class="hint">Click to reveal answer</div>
+                        </div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="card-content">
+                            <div class="card-number">Answer</div>
+                            <div class="answer" id="answer">Loading...</div>
+                            <div class="hint">Click to see question</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-secondary" id="prevBtn" onclick="previousCard()">
+                ← Previous
+            </button>
+            <button class="btn btn-primary" id="flipBtn" onclick="flipCard()">
+                Flip Card
+            </button>
+            <button class="btn btn-secondary" id="nextBtn" onclick="nextCard()">
+                Next →
+            </button>
+        </div>
+
+        <div class="category-filter">
+            <button class="filter-btn active" onclick="filterCategory('all')">All (50)</button>
+            <button class="filter-btn" onclick="filterCategory('core')">Core Concepts (10)</button>
+            <button class="filter-btn" onclick="filterCategory('components')">ML Components (10)</button>
+            <button class="filter-btn" onclick="filterCategory('algorithms')">Algorithms (10)</button>
+            <button class="filter-btn" onclick="filterCategory('genai')">Generative AI (10)</button>
+            <button class="filter-btn" onclick="filterCategory('aws')">AWS Services (10)</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="studiedCount">0</div>
+                <div class="stat-label">Cards Studied</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="remainingCount">50</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>💡 Tip: Use keyboard arrows (← →) to navigate | Space to flip</p>
+            <p class="credit">Created for AWS AI Practitioner (AIF-C01) Certification</p>
+        </footer>
+    </div>
+
+    <script src="flashcards-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
