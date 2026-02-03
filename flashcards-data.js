@@ -1,9 +1,9 @@
 const flashcardsData = [
-    // Core Concepts (1-10)
+    // Domain 1: Fundamentals of AI and ML (20% - Cards 1-15)
     {
         id: 1,
-        category: 'core',
-        categoryName: 'Core Concepts',
+        category: 'domain1',
+        categoryName: 'Domain 1: AI/ML Fundamentals',
         question: 'What is Artificial Intelligence (AI)?',
         answer: 'Technology that enables machines to perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.'
     },
